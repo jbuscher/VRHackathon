@@ -306,7 +306,7 @@ public class NetworkManager: MonoBehaviour
 		if ((Network.isClient || Network.isServer))
 			return;
 
-		GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), background);
+		//GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), background);
 
 		if (startingServer)
 		{
