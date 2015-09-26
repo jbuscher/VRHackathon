@@ -28,7 +28,7 @@ public class EventKickoff : MonoBehaviour {
 		if (Network.isServer) {
 			var buttons = GameObject.FindGameObjectsWithTag("Room1Button");
 			if (buttons[0].GetComponent<EventKickoff>().Clicked && buttons[1].GetComponent<EventKickoff>().Clicked) {
-				GetComponent<NetworkView>().RPC("TriggerDoorOpen", RPCMode.AllBuffered, Network.isServer);
+				GetComponent<NetworkView>().RPC("TriggerDoorOpen", RPCMode.AllBuffered);
 			}
 		}
 	}
