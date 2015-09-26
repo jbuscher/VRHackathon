@@ -7,8 +7,10 @@ public class EventKickoff : MonoBehaviour {
 	bool clientButton = false;
 
 	void OnTriggerEnter(Collider other) {
-		if (other.GetComponent<NetworkView>().isMine) {
-			GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer);
+		if (other.GetComponent<NetworkView>() != null) {
+			if (other.GetComponent<NetworkView>().isMine) {
+				GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer);
+			}
 		}
 	}
 
