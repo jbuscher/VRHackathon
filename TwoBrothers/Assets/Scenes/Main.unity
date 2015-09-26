@@ -388,7 +388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &786860209
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146276396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.8400002, y: 1.65999997, z: -3.67000008}
+  m_LocalPosition: {x: -24.8400002, y: 6.61000013, z: -3.67000008}
   m_LocalScale: {x: .5, y: 5, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -962,8 +962,9 @@ GameObject:
   - 65: {fileID: 1788373068}
   - 23: {fileID: 1788373067}
   - 114: {fileID: 1788373066}
+  - 148: {fileID: 1788373071}
   m_Layer: 0
-  m_Name: Cube 9
+  m_Name: DeathBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,7 +1012,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788373065}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1035,6 +1036,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!148 &1788373071
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788373065}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1788373070}
+  m_ViewID:
+    m_ID: 5
+    m_Type: 1
 --- !u!1 &1800223020
 GameObject:
   m_ObjectHideFlags: 0
