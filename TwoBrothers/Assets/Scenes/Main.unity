@@ -192,7 +192,7 @@ GameObject:
   - 114: {fileID: 290422284}
   m_Layer: 9
   m_Name: ButtonBlue
-  m_TagString: Untagged
+  m_TagString: Room1Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eda2087699794610903357e902ad750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Clicked: 0
 --- !u!148 &290422285
 NetworkView:
   m_ObjectHideFlags: 0
@@ -792,7 +793,7 @@ GameObject:
   - 114: {fileID: 1484358412}
   m_Layer: 8
   m_Name: ButtonRed
-  m_TagString: Untagged
+  m_TagString: Room1Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -808,6 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eda2087699794610903357e902ad750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Clicked: 0
 --- !u!148 &1484358413
 NetworkView:
   m_ObjectHideFlags: 0
