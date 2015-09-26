@@ -289,7 +289,7 @@ public class NetworkManager: MonoBehaviour
 			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2, 150f, 30f), "Start Game!"))
 			{
 				gameOn = true;
-				GetComponent<NetworkView>().RPC ("LoadLevel", RPCMode.AllBuffered, "Main", 1);
+				GetComponent<NetworkView>().RPC ("LoadLevel", RPCMode.AllBuffered, "Level2", 1);
 			}
 		}
 
