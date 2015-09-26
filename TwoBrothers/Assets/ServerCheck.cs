@@ -11,7 +11,7 @@ public class ServerCheck : MonoBehaviour {
 		if (!nView.isMine) {
 			Destroy(GetComponentInChildren<Camera>());
 			Destroy(GetComponent<FirstPersonController>());
-			Destroy(GetComponent<AudioListener>());
+			Destroy(GetComponentInChildren<AudioListener>());
 		} else if (Network.isClient) {
 			// Hide blue
 			Camera camera = GetComponentInChildren<Camera>();
