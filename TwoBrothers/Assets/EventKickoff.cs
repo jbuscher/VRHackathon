@@ -12,11 +12,14 @@ public class EventKickoff : MonoBehaviour {
 		}
 	}
 
+	[RPC]
 	void EventHappened(bool serverSent) {
 		if (!serverSent) {
 			clientButton = true;
+			print("client!!!");
 		} else {
 			serverButton = true;
+			print("SERVERRRR!!!");
 		}
 
 		if (serverButton && clientButton) {
