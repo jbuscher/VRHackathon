@@ -390,6 +390,7 @@ public class NetworkManager: MonoBehaviour
 	[RPC]
 	public void LoadLevel(string level, int levelPrefix)
 	{
+		print(level + " " + levelPrefix);
 		StartCoroutine(loadLevel(level, levelPrefix));
 	}
 	
