@@ -259,137 +259,149 @@ public class NetworkManager: MonoBehaviour
             Network.Disconnect(200);
     }
 
+	public void AutoJoinServer() {
+		if (hostData != null && hostData.Length > 0) {
+			Network.Connect(hostData[0]);
+		} else {
+			StartCoroutine("RefreshHostList");
+		}
+	}
+
+	public void StartServerPlease() {
+		StartServer();
+	}
+
     // IT'S
     // THE
     // THE
 	// THE GUI!!!!!! (If you're reading this, you need to make the menu prettier)
 	public void OnGUI()
 	{
-		if (Network.isServer || Network.isClient)
-		{
-			int index = 0;
-			if (players.Values != null)
-			{
-				foreach (Player aPlayer in players.Values)
-				{
-					GUI.Button(new Rect(Screen.width - 110, 10 + 40*index ,100f , 30f), aPlayer.name);
-					index++;
-				}
-			}
-		}
-
-		// Show what player is running as (Mainly for debug)
-		if (Network.isServer)
-				GUILayout.Label("Running as a server.");
-		else if (Network.isClient)
-				GUILayout.Label("Running as a client.");
-
-		if ((Network.isServer) && !gameOn)
-		{
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2, 150f, 30f), "Start Game!"))
-			{
-				gameOn = true;
-				GetComponent<NetworkView>().RPC ("LoadLevel", RPCMode.AllBuffered, "Level2", 1);
-			}
-		}
-
-		if ((Network.isServer) && !gameOn)
-		{
-			if (GUI.Button(new Rect(10, 10, 150f, 30f), "Exit"))
-			{
-				gameOn = false;
-				GetComponent<NetworkView>().RPC ("LoadLevel", RPCMode.AllBuffered, "Intro", 0);
-			}
-		}
-
-		// If in a room, dont show anything beyond this point
-		if ((Network.isClient || Network.isServer))
-			return;
-
-		//GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), background);
-
-		if (startingServer)
-		{
-			// Get Server Name and Player Name
-			pickedName = GUI.TextField(new Rect(Screen.width/2 - 75f, Screen.height / 2 - 30f, 150f, 20f), pickedName, 16);
-			serverName = GUI.TextField(new Rect(Screen.width/2 - 75f, Screen.height / 2, 150f, 20f), serverName, 20);
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 30, 150f, 30f), "Start Server") && pickedName.Length > 4 && serverName.Length > 6)
-			{
-				startingServer = false;
-				StartServer();
-			}
-			
-			// Cancel
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
-			{
-				startingServer = false;
-			}
-		} else if (joiningServer) {
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 30, 150f, 30f), "Refresh Server List"))
-				StartCoroutine("RefreshHostList");
-			
-			// Perhaps delete? idk
-			if (isRefreshing)
-				GUILayout.Label("Refreshing...");
-			
-			// Host list
-			if (hostData != null)
-			{
-				for (int i = 0; i < hostData.Length; i++)
-				{
-					if (GUI.Button(new Rect(30f + (Screen.width - 360) * Mathf.RoundToInt(i/20), 65f + (30f * i), 300f, 30f), hostData[i].gameName))
-					{
-						joiningServer = false;
-						Network.Connect(hostData[i]);
-					}
-				}
-			}
-			
-			// Cancel
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
-			{
-				joiningServer = false;
-			}
-		} else if (options) {
-			
-			// Cancel
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
-			{
-				options = false;
-			}
-		} else if (credits) {
-			
-			// Cancel
-			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
-			{
-				credits = false;
-			}
-		} else {
-
-			// Create a server
-			if (GUI.Button (new Rect (Screen.width / 2 - 75f, Screen.height / 2 - 15, 150f, 30f), "Start a Server"))
-				startingServer = true;
-
-			// Join a server
-			if (GUI.Button(new Rect(Screen.width/2 - 75f, Screen.height/2 + 25, 150f, 30f), "Join a Server"))
-				joiningServer = true;
-
-			// Options
-			if (GUI.Button(new Rect(Screen.width/2 - 75f, Screen.height/2 + 65, 150f, 30f), "Options"))
-				options = true;
-
-			// Credits
-			if (GUI.Button(new Rect(Screen.width/2 - 75f, Screen.height/2 + 105, 150f, 30f), "Credits"))
-				credits = true;
-		}
+//		if (Network.isServer || Network.isClient)
+//		{
+//			int index = 0;
+//			if (players.Values != null)
+//			{
+//				foreach (Player aPlayer in players.Values)
+//				{
+//					GUI.Button(new Rect(Screen.width - 110, 10 + 40*index ,100f , 30f), aPlayer.name);
+//					index++;
+//				}
+//			}
+//		}
+//
+//		// Show what player is running as (Mainly for debug)
+//		if (Network.isServer)
+//				GUILayout.Label("Running as a server.");
+//		else if (Network.isClient)
+//				GUILayout.Label("Running as a client.");
+//
+//		if ((Network.isServer) && !gameOn)
+//		{
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2, 150f, 30f), "Start Game!"))
+//			{
+//				gameOn = true;
+//				GetComponent<NetworkView>().RPC ("LoadLevel", RPCMode.AllBuffered, "Main", 1);
+//			}
+//		}
+//
+//		if ((Network.isServer) && !gameOn)
+//		{
+//			if (GUI.Button(new Rect(10, 10, 150f, 30f), "Exit"))
+//			{
+//				gameOn = false;
+//				GetComponent<NetworkView>().RPC ("LoadLevel", RPCMode.AllBuffered, "Intro", 0);
+//			}
+//		}
+//
+//		// If in a room, dont show anything beyond this point
+//		if ((Network.isClient || Network.isServer))
+//			return;
+//
+//		//GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), background);
+//
+//		if (startingServer)
+//		{
+//			// Get Server Name and Player Name
+//			pickedName = GUI.TextField(new Rect(Screen.width/2 - 75f, Screen.height / 2 - 30f, 150f, 20f), pickedName, 16);
+//			serverName = GUI.TextField(new Rect(Screen.width/2 - 75f, Screen.height / 2, 150f, 20f), serverName, 20);
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 30, 150f, 30f), "Start Server") && pickedName.Length > 4 && serverName.Length > 6)
+//			{
+//				startingServer = false;
+//				StartServer();
+//			}
+//			
+//			// Cancel
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
+//			{
+//				startingServer = false;
+//			}
+//		} else if (joiningServer) {
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 30, 150f, 30f), "Refresh Server List"))
+//				StartCoroutine("RefreshHostList");
+//			
+//			// Perhaps delete? idk
+//			if (isRefreshing)
+//				GUILayout.Label("Refreshing...");
+//			
+//			// Host list
+//			if (hostData != null)
+//			{
+//				for (int i = 0; i < hostData.Length; i++)
+//				{
+//					if (GUI.Button(new Rect(30f + (Screen.width - 360) * Mathf.RoundToInt(i/20), 65f + (30f * i), 300f, 30f), hostData[i].gameName))
+//					{
+//						joiningServer = false;
+//						Network.Connect(hostData[i]);
+//					}
+//				}
+//			}
+//			
+//			// Cancel
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
+//			{
+//				joiningServer = false;
+//			}
+//		} else if (options) {
+//			
+//			// Cancel
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
+//			{
+//				options = false;
+//			}
+//		} else if (credits) {
+//			
+//			// Cancel
+//			if (GUI.Button(new Rect(Screen.width / 2 - 75, Screen.height / 2 + 70, 150f, 30f), "Cancel"))
+//			{
+//				credits = false;
+//			}
+//		} else {
+//
+//			// Create a server
+//			if (GUI.Button (new Rect (Screen.width / 2 - 75f, Screen.height / 2 - 15, 150f, 30f), "Start a Server"))
+//				startingServer = true;
+//
+//			// Join a server
+//			if (GUI.Button(new Rect(Screen.width/2 - 75f, Screen.height/2 + 25, 150f, 30f), "Join a Server"))
+//				joiningServer = true;
+//
+//			// Options
+//			if (GUI.Button(new Rect(Screen.width/2 - 75f, Screen.height/2 + 65, 150f, 30f), "Options"))
+//				options = true;
+//
+//			// Credits
+//			if (GUI.Button(new Rect(Screen.width/2 - 75f, Screen.height/2 + 105, 150f, 30f), "Credits"))
+//				credits = true;
+//		}
 	}
-
 
 	// Online Script I found that lets you change scenes within Networks
 
 	[RPC]
 	public void LoadLevel(string level, int levelPrefix)
 	{
+		print(level + " " + levelPrefix);
 		StartCoroutine(loadLevel(level, levelPrefix));
 	}
 	
