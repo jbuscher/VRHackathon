@@ -5,8 +5,10 @@ public class EventKickoff : MonoBehaviour {
 
 	public bool Clicked;
 	private Animator anim;
+	AudioSource aud;
 
 	void Start() {
+		aud = GetComponent<AudioSource> ();
 		anim = GetComponent<Animator> ();
 	}
 
@@ -29,6 +31,7 @@ public class EventKickoff : MonoBehaviour {
 
 	[RPC]
 	void EventHappened(bool serverSent, bool value) {
+		aud.Play();
 		Clicked = value;
 		if (Clicked) {
 			anim.SetBool("Down", true);
