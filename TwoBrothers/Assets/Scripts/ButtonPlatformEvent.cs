@@ -3,13 +3,20 @@ using System.Collections;
 
 public class ButtonPlatformEvent : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public string platformTag;
+
+
+	void hidePlatforms() {
+		GameObject[] platforms = GameObject.FindGameObjectsWithTag (platformTag);
+		foreach (GameObject platform in platforms) {
+			platform.transform.Translate(Vector3.up * 100);
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void showPlatforms() {
+		GameObject[] platforms =GameObject.FindGameObjectsWithTag (platformTag);
+		foreach (GameObject platform in platforms) {
+			platform.transform.Translate(Vector3.down * 100);
+		}
 	}
 }
