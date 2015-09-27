@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: f5f48447a9cf546769a3bdc7860f2d9c, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 19c8cf8b3a8db3c46a82f0bf806ad78d, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
-  anim: {fileID: 14771979}
+  anim: {fileID: 0}
 --- !u!95 &14771979
 Animator:
   serializedVersion: 3
@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
-  anim: {fileID: 1010232958}
+  anim: {fileID: 0}
 --- !u!148 &1010232957
 NetworkView:
   m_ObjectHideFlags: 0
