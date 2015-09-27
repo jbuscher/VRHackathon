@@ -11,6 +11,11 @@ public class DoorEvent : MonoBehaviour {
 
 	public void Fire() {
 		anim.SetBool("Open", true);
-		Destroy(gameObject.GetComponent<BoxCollider>());
+		gameObject.GetComponent<BoxCollider>().enabled = false;
+	}
+
+	public void UnFire() {
+		anim.SetBool("Open", false);
+		gameObject.GetComponent<BoxCollider>().enabled = true;
 	}
 }

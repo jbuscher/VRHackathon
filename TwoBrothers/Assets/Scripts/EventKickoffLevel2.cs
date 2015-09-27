@@ -34,7 +34,7 @@ public class EventKickoffLevel2 : MonoBehaviour {
 
 	[RPC]
 	void TriggerDoorOpen() {
-		GameObject.Find("DoorRed").GetComponent<DoorEvent>().Fire();
-		GameObject.Find("DoorBlue").GetComponent<DoorEvent>().Fire();
+		GameObject.Find("GlassToBreak").GetComponent<GlassEvent>().Fire();
+		GameObject.Find("EndDoor").GetComponent<DoorEvent>().Fire();
 	}
 }
