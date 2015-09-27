@@ -4,7 +4,7 @@ using System.Collections;
 public class EventKickoff : MonoBehaviour {
 
 	public bool Clicked;
-	public Animator anim;
+	private Animator anim;
 
 	void Start() {
 		anim = GetComponent<Animator> ();

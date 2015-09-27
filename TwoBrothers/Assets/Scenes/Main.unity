@@ -96,6 +96,7 @@ GameObject:
   - 95: {fileID: 14771979}
   - 114: {fileID: 14771978}
   - 65: {fileID: 14771980}
+  - 148: {fileID: 14771981}
   m_Layer: 9
   m_Name: Button (1)
   m_TagString: Untagged
@@ -129,7 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
-  anim: {fileID: 0}
 --- !u!95 &14771979
 Animator:
   serializedVersion: 3
@@ -160,6 +160,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!148 &14771981
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14771976}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 14771977}
+  m_ViewID:
+    m_ID: 7
+    m_Type: 1
 --- !u!1 &74127683
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +394,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2ce79b70b6bd904e953d6c3755fa60e, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &594763439 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 441974, guid: e2ce79b70b6bd904e953d6c3755fa60e, type: 2}
+  m_PrefabInternal: {fileID: 594763438}
 --- !u!1 &668028718
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +470,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
-  anim: {fileID: 0}
+--- !u!148 &1010232957
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010232954}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 594763439}
+  m_ViewID:
+    m_ID: 6
+    m_Type: 1
 --- !u!1 &1788373065
 GameObject:
   m_ObjectHideFlags: 0
