@@ -11482,7 +11482,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1339083250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.15999985, y: 2.1099999, z: -47.0699997}
+  m_LocalPosition: {x: 5.19999981, y: 2.1099999, z: 17.6599998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13688,6 +13688,7 @@ GameObject:
   - 4: {fileID: 1697741198}
   - 95: {fileID: 1697741199}
   - 114: {fileID: 1697741200}
+  - 148: {fileID: 1697741201}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -13735,10 +13736,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1697741197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eda2087699794610903357e902ad750, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d55f7c7717434bdab2d1f06b954ec99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
+--- !u!148 &1697741201
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697741197}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1697741198}
+  m_ViewID:
+    m_ID: 8
+    m_Type: 1
 --- !u!1 &1701413409
 GameObject:
   m_ObjectHideFlags: 0
