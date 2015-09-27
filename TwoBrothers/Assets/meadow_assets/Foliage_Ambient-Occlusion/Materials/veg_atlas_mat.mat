@@ -52,11 +52,3 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 0}
-      data:
-        first:
-          name: _TreeInstanceScale
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TreeInstanceColor
-        second: {r: 1, g: 1, b: 1, a: 1}
