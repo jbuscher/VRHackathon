@@ -6,9 +6,7 @@ public class TwoPersonStaging : MonoBehaviour {
 	public bool Clicked;
 	
 	void OnTriggerEnter(Collider other) {
-		print ("called the function");
 		if (other.GetComponent<NetworkView>() != null) {
-			print ("HEre");
 			if (other.GetComponent<NetworkView>().isMine) {
 				if (gameObject.tag.Equals("RedStaging") && Network.isServer) {
 					GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer, true);
