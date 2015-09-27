@@ -10,7 +10,6 @@ public class DoorEvent : MonoBehaviour {
 	}
 
 	public void Fire() {
-		print("POOP");
 		anim.SetBool("Open", true);
 		Destroy(gameObject.GetComponent<BoxCollider>());
 	}
