@@ -48,5 +48,6 @@ public class EventKickoff : MonoBehaviour {
 	void TriggerDoorOpen() {
 		GameObject.Find("DoorRed").GetComponent<DoorEvent>().Fire();
 		GameObject.Find("DoorBlue").GetComponent<DoorEvent>().Fire();
+		GameObject.Find("NextDoor").GetComponent<DoorEvent>().Fire();
 	}
 }
