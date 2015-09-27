@@ -4,6 +4,7 @@ using System.Collections;
 public class EventKickoffLevel2 : MonoBehaviour {
 
 	public bool Clicked;
+	public AudioSource aud;
 
 	void OnTriggerEnter(Collider other) {
 		if (other.GetComponent<NetworkView>() != null) {
@@ -19,6 +20,7 @@ public class EventKickoffLevel2 : MonoBehaviour {
 
 		if (Clicked) {
 			GetComponent<NetworkView>().RPC("TriggerDoorOpen", RPCMode.AllBuffered);
+			aud.Play();
 		}
 	}
 
