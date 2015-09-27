@@ -30,7 +30,7 @@ public class AlertNetworkDecision : MonoBehaviour {
 	IEnumerator ServerLoop() {
 		while (true) {
 			if (Network.connections.Length > 0) {
-				GameObject.Find("NetworkManager").GetComponent<NetworkView>().RPC("LoadLevel", RPCMode.AllBuffered);
+				GameObject.Find("NetworkManager").GetComponent<NetworkView>().RPC("LoadLevel", RPCMode.AllBuffered, "Main", 1);
 				break;
 			}
 
