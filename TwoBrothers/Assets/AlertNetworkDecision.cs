@@ -4,15 +4,23 @@ using System.Collections;
 public class AlertNetworkDecision : MonoBehaviour {
 
 	public bool isServer;
+	public bool isLooping= false;
 
 	void OnTriggerEnter(Collider other) {
-		if (isServer) {
-			if (!Network.isServer) {
-				GameObject.Find("NetworkManager").GetComponent<NetworkManager>().StartServerPlease();
-				StartCoroutine("ServerLoop");
+		if (!isLooping) {
+			if (isServer) {
+				if (!Network.isServer) {
+					GameObject.Find("NetworkManager").GetComponent<NetworkManager>().StartServerPlease();
+					isLooping = true;
+					StartCoroutine("ServerLoop");
+				}
+			} else {
+				isLooping = true;
+				StartCoroutine("LoopDaLoop");
 			}
-		} else {
-			StartCoroutine("LoopDaLoop");
+			if (isLooping) {
+				GameObject.Find("Wall").transform.Translate(Vector3.forward * -8);
+			}
 		}
 	}
 
