@@ -31,9 +31,9 @@ public class EventKickoff : MonoBehaviour {
 	void EventHappened(bool serverSent, bool value) {
 		Clicked = value;
 		if (Clicked) {
-			anim.Play ("Button_Down");
+			anim.SetBool("Down", true);
 		} else {
-			anim.Play("Button_Up");
+			anim.SetBool("Down", false);
 		}
 
 		if (Network.isServer) {
