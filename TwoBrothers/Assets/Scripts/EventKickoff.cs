@@ -4,8 +4,14 @@ using System.Collections;
 public class EventKickoff : MonoBehaviour {
 
 	public bool Clicked;
+	public Animator anim;
+
+	void Start() {
+		anim = GetComponent<Animator> ();
+	}
 
 	void OnTriggerEnter(Collider other) {
+
 		if (other.GetComponent<NetworkView>() != null) {
 			if (other.GetComponent<NetworkView>().isMine) {
 				GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer, true);
@@ -24,6 +30,11 @@ public class EventKickoff : MonoBehaviour {
 	[RPC]
 	void EventHappened(bool serverSent, bool value) {
 		Clicked = value;
+		if (Clicked) {
+			anim.Play ("Button_Down");
+		} else {
+			anim.Play("Button_Up");
+		}
 
 		if (Network.isServer) {
 			var buttons = GameObject.FindGameObjectsWithTag("Room1Button");
