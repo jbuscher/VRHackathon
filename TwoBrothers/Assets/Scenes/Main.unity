@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
-  anim: {fileID: 0}
+  anim: {fileID: 14771979}
 --- !u!95 &14771979
 Animator:
   serializedVersion: 3
@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
-  anim: {fileID: 0}
+  anim: {fileID: 1010232958}
 --- !u!148 &1010232957
 NetworkView:
   m_ObjectHideFlags: 0
