@@ -11,5 +11,6 @@ public class DoorEvent : MonoBehaviour {
 
 	public void Fire() {
 		anim.SetBool("open", true);
+		Collider.enabled = false;
 	}
 }
