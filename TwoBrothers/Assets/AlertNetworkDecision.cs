@@ -5,6 +5,7 @@ public class AlertNetworkDecision : MonoBehaviour {
 
 	public bool isServer;
 	public bool isLooping= false;
+	public AudioSource aud;
 
 	void OnTriggerEnter(Collider other) {
 		if (!isLooping) {
@@ -12,10 +13,12 @@ public class AlertNetworkDecision : MonoBehaviour {
 				if (!Network.isServer) {
 					GameObject.Find("NetworkManager").GetComponent<NetworkManager>().StartServerPlease();
 					isLooping = true;
+					aud.Play();
 					StartCoroutine("ServerLoop");
 				}
 			} else {
 				isLooping = true;
+				aud.Play();
 				StartCoroutine("LoopDaLoop");
 			}
 			if (isLooping) {
@@ -47,7 +50,7 @@ public class AlertNetworkDecision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		aud = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
