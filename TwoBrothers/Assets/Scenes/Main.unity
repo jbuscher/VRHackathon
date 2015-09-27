@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
+  anim: {fileID: 14771979}
 --- !u!95 &14771979
 Animator:
   serializedVersion: 3
@@ -1657,6 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!65 &703441614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2601,6 +2603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
+  anim: {fileID: 1010232958}
 --- !u!148 &1010232957
 NetworkView:
   m_ObjectHideFlags: 0
@@ -3003,6 +3006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!65 &1118253395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4427,6 +4431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!82 &1865433294
 AudioSource:
   m_ObjectHideFlags: 0

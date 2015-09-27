@@ -4,12 +4,11 @@ using System.Collections;
 public class EventKickoff : MonoBehaviour {
 
 	public bool Clicked;
-	private Animator anim;
+	public Animator anim;
 	AudioSource aud;
 
 	void Start() {
 		aud = GetComponent<AudioSource> ();
-		anim = GetComponent<Animator> ();
 	}
 
 	void OnTriggerEnter(Collider other) {
