@@ -6,12 +6,13 @@ public class TwoPersonStaging : MonoBehaviour {
 	public bool Clicked;
 	
 	void OnTriggerEnter(Collider other) {
-		
+		print ("called the function");
 		if (other.GetComponent<NetworkView>() != null) {
+			print ("HEre");
 			if (other.GetComponent<NetworkView>().isMine) {
-				if (gameObject.tag == "RedStaging" && Network.isServer) {
+				if (gameObject.tag.Equals("RedStaging") && Network.isServer) {
 					GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer, true);
-				} else if (gameObject.tag == "BlueStaging" && Network.isClient) {
+				} else if (gameObject.tag.Equals("BlueStaging") && Network.isClient) {
 					GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer, true);
 				}
 			}
@@ -21,9 +22,9 @@ public class TwoPersonStaging : MonoBehaviour {
 	void OnTriggerExit(Collider other) {
 		if (other.GetComponent<NetworkView>() != null) {
 			if (other.GetComponent<NetworkView>().isMine) {
-				if (gameObject.tag == "RedStaging" && Network.isServer) {
+				if (gameObject.tag.Equals("RedStaging") && Network.isServer) {
 					GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer, false);
-				} else if (gameObject.tag == "BlueStaging" && Network.isClient) {
+				} else if (gameObject.tag.Equals("BlueStaging") && Network.isClient) {
 					GetComponent<NetworkView>().RPC("EventHappened", RPCMode.AllBuffered, Network.isServer, false);
 				}
 			}

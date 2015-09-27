@@ -522,7 +522,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43471624}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9048,6 +9048,7 @@ GameObject:
   - 65: {fileID: 1072531444}
   - 23: {fileID: 1072531443}
   - 114: {fileID: 1072531442}
+  - 148: {fileID: 1072531446}
   m_Layer: 0
   m_Name: RedStaging
   m_TagString: RedStaging
@@ -9110,7 +9111,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072531440}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9122,6 +9123,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072531440}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!148 &1072531446
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072531440}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1072531441}
+  m_ViewID:
+    m_ID: 6
+    m_Type: 1
 --- !u!1 &1075552394
 GameObject:
   m_ObjectHideFlags: 0
