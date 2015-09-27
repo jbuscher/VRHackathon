@@ -3,7 +3,13 @@ using System.Collections;
 
 public class DoorEvent : MonoBehaviour {
 
+	private Animator anim;
+
+	void Start() {
+		anim = GetComponent<Animator>();
+	}
+
 	public void Fire() {
-		this.transform.Translate(Vector3.down * 10);
+		anim.SetBool("open", true);
 	}
 }
