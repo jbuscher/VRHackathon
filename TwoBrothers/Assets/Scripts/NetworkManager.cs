@@ -260,12 +260,8 @@ public class NetworkManager: MonoBehaviour
     }
 
 	public void AutoJoinServer() {
-		if (hostData != null) {
-			foreach (HostData host in hostData)
-			{
-				Network.Connect(host);
-				break;
-			}
+		if (hostData != null && hostData.Length > 0) {
+			Network.Connect(hostData[0]);
 		} else {
 			StartCoroutine("RefreshHostList");
 		}

@@ -17,13 +17,12 @@ public class AlertNetworkDecision : MonoBehaviour {
 	}
 
 	IEnumerator LoopDaLoop() {
-		while (true) {
-			GameObject.Find("NetworkManager").GetComponent<NetworkManager>().AutoJoinServer();
-			yield return new WaitForSeconds(3);
+		GameObject.Find("NetworkManager").GetComponent<NetworkManager>().AutoJoinServer();
+		
+		yield return new WaitForSeconds(3);
 
-			if (Network.isClient) {
-				break;
-			}
+		if (!Network.isClient) {
+			StartCoroutine("LoopDaLoop");;
 		}
 	}
 
