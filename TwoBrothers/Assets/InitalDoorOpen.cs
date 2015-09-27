@@ -9,8 +9,8 @@ public class InitalDoorOpen : MonoBehaviour {
 	}
 
 	IEnumerator DoorDelay() {
+		yield return new WaitForSeconds (3);
 		GameObject.Find("DoorIntro").GetComponent<DoorEvent>().Fire();
 		GameObject.Find("DoorIntro2").GetComponent<DoorEvent>().Fire();
-		yield return new WaitForSeconds (5);
 	}
 }

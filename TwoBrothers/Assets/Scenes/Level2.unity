@@ -3874,7 +3874,7 @@ Transform:
   m_LocalScale: {x: 200, y: 1, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &388514614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,7 +5699,7 @@ Transform:
   - {fileID: 1302402235}
   - {fileID: 1621218923}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &622837049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6452,6 +6452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 755992980}
 --- !u!65 &755992982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10696,6 +10697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1259320674}
 --- !u!65 &1259320676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12230,7 +12232,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467261727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64999998, y: 3.39298272, z: 0}
+  m_LocalPosition: {x: -1.25877917, y: 3.39298272, z: 0}
   m_LocalScale: {x: 1, y: 9.22916889, z: 1}
   m_Children: []
   m_Father: {fileID: 755992979}
@@ -12987,6 +12989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1602036162}
 --- !u!65 &1602036164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13292,6 +13295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1614381393}
 --- !u!65 &1614381395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13505,7 +13509,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1630080439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96536493, y: 2.16156578, z: 0}
+  m_LocalPosition: {x: -4.39467955, y: 2.16156578, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1139891780}
@@ -16153,6 +16157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 2034090681}
 --- !u!65 &2034090683
 BoxCollider:
   m_ObjectHideFlags: 0
