@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -1461,6 +1459,7 @@ GameObject:
   - 4: {fileID: 703441611}
   - 95: {fileID: 703441612}
   - 114: {fileID: 703441613}
+  - 65: {fileID: 703441614}
   m_Layer: 0
   m_Name: DoorRed
   m_TagString: Untagged
@@ -1515,6 +1514,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &703441614
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703441610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4000001, y: 4, z: .200000003}
+  m_Center: {x: -1.52999997, y: 2.5, z: -.0700000003}
 --- !u!1 &717869389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2105,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IntensityMultiplier: 1
+  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
@@ -2454,6 +2466,7 @@ GameObject:
   - 4: {fileID: 1118253392}
   - 95: {fileID: 1118253393}
   - 114: {fileID: 1118253394}
+  - 65: {fileID: 1118253395}
   m_Layer: 0
   m_Name: DoorBlue
   m_TagString: Untagged
@@ -2508,6 +2521,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244bf0d67176462882f751bb0539580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1118253395
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118253391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3900001, y: 3.96000004, z: .349999994}
+  m_Center: {x: -1.62, y: 2.1500001, z: 0}
 --- !u!1 &1145299627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3955,6 +3980,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IntensityMultiplier: 1
+  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
