@@ -20,7 +20,7 @@ public class EventKickoffLevel2 : MonoBehaviour {
 
 		if (Clicked) {
 			GetComponent<NetworkView>().RPC("TriggerDoorOpen", RPCMode.AllBuffered);
-			anim.SetBool("Down", true)
+			anim.SetBool("Down", true);
 		}
 	}
 

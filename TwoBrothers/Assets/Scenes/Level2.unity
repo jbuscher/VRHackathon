@@ -13741,6 +13741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clicked: 0
+  anim: {fileID: 1697741199}
 --- !u!148 &1697741201
 NetworkView:
   m_ObjectHideFlags: 0
