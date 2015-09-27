@@ -431,7 +431,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: .100000001}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!1 &664144075
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &957647360
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +760,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016185458}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -868,6 +868,7 @@ GameObject:
   - 33: {fileID: 1301931969}
   - 65: {fileID: 1301931968}
   - 23: {fileID: 1301931967}
+  - 114: {fileID: 1301931971}
   m_Layer: 0
   m_Name: ServerCube
   m_TagString: Untagged
@@ -906,7 +907,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301931966}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -930,6 +931,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1301931971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301931966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d408067b21d4429a0c6b30d130efb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isServer: 1
 --- !u!1 &1683084953
 GameObject:
   m_ObjectHideFlags: 0
